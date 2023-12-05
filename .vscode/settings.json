@@ -1,0 +1,38 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/xarm_msgs/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/moveit_configs_utils/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/srdfdom/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/py_pubsub/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/moveit_task_constructor_msgs/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/launch_param_builder/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/install/moveit_configs_utils/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/install/srdfdom/local/lib/python3.10/dist-packages",
+        "/home/erl-tianyu/Nikola_ws/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/install/py_pubsub/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/install/my-test-package/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages",
+        "/home/erl-tianyu/Nikola_ws/install/launch_param_builder/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/xarm_msgs/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/moveit_configs_utils/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/srdfdom/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/py_pubsub/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/moveit_task_constructor_msgs/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/ros2_ws/install/launch_param_builder/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/install/moveit_configs_utils/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/install/srdfdom/local/lib/python3.10/dist-packages",
+        "/home/erl-tianyu/Nikola_ws/install/py_srvcli/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/install/py_pubsub/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/install/my-test-package/lib/python3.10/site-packages",
+        "/home/erl-tianyu/Nikola_ws/install/moveit_task_constructor_msgs/local/lib/python3.10/dist-packages",
+        "/home/erl-tianyu/Nikola_ws/install/launch_param_builder/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
