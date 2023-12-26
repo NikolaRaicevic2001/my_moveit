@@ -10,7 +10,9 @@ find_package(ament_cmake REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(rclcpp REQUIRED)
 
+# Adding Executables
 add_executable(my_moveit src/my_moveit.cpp)
+
 target_include_directories(my_moveit PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
@@ -23,6 +25,10 @@ ament_target_dependencies(
 
 install(TARGETS my_moveit
   DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY launch 
+DESTINATION share/${PROJECT_NAME})
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -37,3 +43,4 @@ if(BUILD_TESTING)
 endif()
 
 ament_package()
+
