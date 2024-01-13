@@ -15,7 +15,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "rviz_config",
-            default_value="panda_moveit_config_demo.rviz",
+            default_value="xarm6_moveit_config_demo.rviz",
             description="RViz configuration file",
         )
     )
@@ -23,13 +23,13 @@ def generate_launch_description():
     return LaunchDescription(
         declared_arguments + [OpaqueFunction(function=launch_setup)]
     )
-
+    
 def launch_setup(context, *args, **kwargs):
 
     moveit_config = (
-        MoveItConfigsBuilder("my_moveit_panda")
-        .robot_description(file_path="config/panda.urdf.xacro")
-        .trajectory_execution(file_path="config/gripper_moveit_controllers.yaml")
+        MoveItConfigsBuilder("my_moveit_xarm6")
+        .robot_description(file_path="config/xarm6.urdf.xacro")
+        .trajectory_execution(file_path="config/controllers.yaml")
         .planning_scene_monitor(
             publish_robot_description=True, publish_robot_description_semantic=True
         )
@@ -74,7 +74,7 @@ def launch_setup(context, *args, **kwargs):
         executable="static_transform_publisher",
         name="static_transform_publisher",
         output="log",
-        arguments=["0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "world", "panda_link0"],
+        arguments=["0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "world", "link_base"],
     )
 
     # Publish TF
@@ -88,7 +88,7 @@ def launch_setup(context, *args, **kwargs):
 
     # ros2_control using FakeSystem as hardware
     ros2_controllers_path = os.path.join(
-        get_package_share_directory("my_moveit_panda_moveit_config"),
+        get_package_share_directory("my_moveit_xarm6_moveit_config"),
         "config",
         "ros2_controllers.yaml",
     )
@@ -114,13 +114,13 @@ def launch_setup(context, *args, **kwargs):
     arm_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["panda_arm_controller", "-c", "/controller_manager"],
+        arguments=["xarm6_arm_controller", "-c", "/controller_manager"],
     )
 
     hand_controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["panda_hand_controller", "-c", "/controller_manager"],
+        arguments=["xarm6_hand_controller", "-c", "/controller_manager"],
     )
     nodes_to_start = [
         rviz_node,
